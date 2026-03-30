@@ -35,8 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-top: 40px;
     box-shadow: rgba(20, 20, 20, 0.4) 5px 5px, rgba(34, 34, 34, 0.3) 10px 10px;
 }
 
@@ -45,11 +44,9 @@ body {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    box-shadow:
-    rgba(70, 150, 255, 0.4) 4px 4px,
-    rgba(60, 67, 255, 0.3) 8px 8px,
-    rgba(36, 93, 249, 0.2) 12px 12px,
-    rgba(30, 14, 250, 0.1) 16px 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: rgba(20, 20, 20, 0.4) 5px 5px, rgba(34, 34, 34, 0.3) 10px 10px;
 }
 
 .container-input:hover {
@@ -57,33 +54,47 @@ body {
 }
 
 .container-input input {
-    height: 50px;
-    width: 600px;
-    border-radius: 10px 0px 0px 10px;
-    border: none;
+    height: 60px;
+    width: 590px;
     background: rgb(241, 241, 241);
-    border: 1px solid rgb(23, 23, 23);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.container-input input::placeholder {
+    font-size: 20px;
+    color: rgb(168, 168, 168);
 }
 
 
-
 .container-input button {
-    height: 54px;
-    border: 1px solid rgb(23, 23, 23);
-    background: rgb(255, 183, 67);
-    border-radius: 0px 10px 10px 0px;
+    height: 64px;
+    width: 90px;
+    background: rgb(116, 180, 248);
     cursor: pointer;
     color: white;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .to-do-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
-    height: 70px;
-    background: red;
-    color: white;
+    width: 600px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: rgba(20, 20, 20, 0.601) 5px 5px, rgba(34, 34, 34, 0.447) 10px 10px;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.to-do-block:hover{
+    box-shadow: none;
 }
 
 .to-do-block input {
