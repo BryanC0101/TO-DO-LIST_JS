@@ -3,16 +3,28 @@
 body {
     margin: 0;
     height: 100vh;
-    background: rgb(145, 246, 211);
-    background-size: 600% 600%;
-    animation: darkMove 15s ease infinite;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #f5f7fa, #a9ccea, #c3ebfc, #65d5f1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@keyframes darkMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+:root {
+    --primary-green: #8CD4CB;
+    --primary-red: #ef8585;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -56,7 +68,7 @@ body {
 .container-input input {
     height: 60px;
     width: 590px;
-    background: rgb(241, 241, 241);
+    background: rgb(255, 255, 255);
     border: none;
     border-radius: 10px 0px 0px 10px;
     outline: none;
@@ -78,27 +90,54 @@ body {
     color: white;
     border: none;
     border-radius: 0px 10px 10px 0px;
+    font-size: 20px;
 }
 
 .to-do-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 600px;
+    width: 550px;
     height: 60px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: rgba(20, 20, 20, 0.601) 5px 5px, rgba(34, 34, 34, 0.447) 10px 10px;
     transition: all 0.3s ease;
     border: 1px solid black;
     color: rgb(0, 0, 0);
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .to-do-block:hover{
     box-shadow: none;
+    cursor: pointer;
 }
 
 .to-do-block input {
     width: 50px;
     height: 30px;
     border-radius: 100%;
+}
+
+.checkboxleft, .checkboxright {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.checkboxleft:hover {
+    box-shadow: rgba(20, 20, 20, 0.601) -5px 5px;
+    background: var(--primary-green);
+    transform: translate(3px, -3px);
+}
+
+.checkboxright:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: rgba(20, 20, 20, 0.601) 5px 5px;
+    background: var(--primary-red);
 }
