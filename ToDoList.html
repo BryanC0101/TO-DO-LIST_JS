@@ -8,21 +8,22 @@
 </head>
 <body>
     <div class="container">
+
         <div class="container-input">
-            <input type="text" placeholder="Add Your Text">
-            <button>Add</button>
+            <input type="text" id="input-text" placeholder="Add Your Text">
+            <button onclick="addTask()">Add</button>
         </div>
         
         <div id="container-todolist">
-
-
-            <div class="to-do-block">
-                <div class="checkboxleft"><img src="images/check.svg" alt=""></div>
-                <p>Add your text here...</p>
-                <div class="checkboxright"><img src="images/delete.svg" alt=""></div>
-            </div>
-
+            <ul id="to-do-block">
+                <li class="task">
+                    <span class="checkboxleft"><img src="images/check.svg" alt=""></span>
+                    <span>Add your text here...</span>
+                    <span class="checkboxright"><img src="images/delete.svg" alt=""></span>
+                </li>
+            </ul>
         </div>
+
     </div>
     
     <script src="script.js"></script>
